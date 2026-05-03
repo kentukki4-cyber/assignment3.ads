@@ -1,3 +1,5 @@
+package task1;
+
 import java.util.Scanner;
 
 public class AnagramChecker {
@@ -24,24 +26,22 @@ public class AnagramChecker {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("=== Проверка анаграмм ===");
-
         while (true) {
-            System.out.print("\nВведите первую строку (или 'exit' для выхода): ");
+            System.out.print(" ");
             String s1 = scanner.nextLine().trim();
 
             if (s1.equalsIgnoreCase("exit")) {
-                System.out.println("Выход из программы.");
+                System.out.println(" ");
                 break;
             }
 
-            System.out.print("Введите вторую строку: ");
+            System.out.print(" ");
             String s2 = scanner.nextLine().trim();
 
             if (isAnagram(s1, s2)) {
-                System.out.println("✅ \"" + s1 + "\" и \"" + s2 + "\" — АНАГРАММЫ");
+                System.out.println("YES");
             } else {
-                System.out.println("❌ \"" + s1 + "\" и \"" + s2 + "\" — НЕ анаграммы");
+                System.out.println("NO");
             }
         }
 
